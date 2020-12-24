@@ -20,10 +20,11 @@ app.listen(PORT, () => {
 });
 
 app.all("*", (req, res) => {
-  sendErrorProd(
+  console.log('request:', req);
+  /* sendErrorProd(
     new AppError(`Can't find ${req.originalUrl} on this server!`, 404),
     res
-  );
+  ); */
 });
 
 process.on("unhandledRejection", (err) => {

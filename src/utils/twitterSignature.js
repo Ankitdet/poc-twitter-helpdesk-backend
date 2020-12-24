@@ -8,8 +8,8 @@ module.exports.getAuthorization = (
   accessToken,
   accessTokenSecret
 ) => {
-  const consumerKey = process.env.TWITTER_CONSUMER_KEY; // keysJson.TWITTER_CONSUMER_KEY;
-  const consumerSecret = process.env.TWITTER_CONSUMER_SECRET; // keysJson.TWITTER_CONSUMER_SECRET;
+  const consumerKey = 'wemlnsw37vkTzxN0KTeB3EdzF'; // keysJson.TWITTER_CONSUMER_KEY;
+  const consumerSecret = 'GuNyCKSRjEHZ03maGvWvuvzsR2864SitUkCKi4XpPnnznzcjp2'; // keysJson.TWITTER_CONSUMER_SECRET;
   const twitterAccessToken = accessToken ? accessToken : "";
   const twitterAccessTokenSecret = accessTokenSecret ? accessTokenSecret : "";
 
