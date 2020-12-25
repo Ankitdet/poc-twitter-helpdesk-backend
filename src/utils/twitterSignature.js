@@ -8,15 +8,14 @@ module.exports.getAuthorization = (
   accessToken,
   accessTokenSecret
 ) => {
-  const consumerKey = 'wemlnsw37vkTzxN0KTeB3EdzF'; // keysJson.TWITTER_CONSUMER_KEY;
-  const consumerSecret = 'GuNyCKSRjEHZ03maGvWvuvzsR2864SitUkCKi4XpPnnznzcjp2'; // keysJson.TWITTER_CONSUMER_SECRET;
+  const consumerKey = process.env.TWITTER_CONSUMER_KEY ; ; 
+  const consumerSecret = process.env.TWITTER_CONSUMER_SECRET ;
   const twitterAccessToken = accessToken ? accessToken : "";
   const twitterAccessTokenSecret = accessTokenSecret ? accessTokenSecret : "";
 
   const timestamp = Math.round(Date.now() / 1000);
   const nonce = Buffer.from(consumerKey + ":" + timestamp).toString("base64");
 
-  // generate signature from base string & signing key
   let baseString = oAuthBaseString(
     httpMethod,
     baseUrl,
