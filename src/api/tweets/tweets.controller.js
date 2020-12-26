@@ -53,6 +53,7 @@ module.exports.fetchMentions = async (req, res) => {
             replies.push(item);
           });
       });
+    replies = replies.sort((a,b) => a.id - b.id);
     const updatedData =
       data &&
       data.map((item) => {
